@@ -1,0 +1,15 @@
+{
+  "name": "linear-algebra-lab",
+  "version": "1.0.0",
+  "description": "Interactive 2D and 3D lessons on linear algebra. Plain HTML, CSS and JavaScript, no build step.",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "test": "node tests/smoke.test.js",
+    "build:single": "python3 scripts/build_single_file.py"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  },
+  "license": "MIT"
+}

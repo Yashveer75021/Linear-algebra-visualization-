@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Linear Algebra Lab</title>
+<meta name="description" content="Ten interactive lessons on linear algebra, with 2D and 3D pictures you can drag and rotate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="bgfx" aria-hidden="true"></div>
+<header class="top"><div class="wrap in"><a class="brand" href="#/" data-link>Linear Algebra Lab</a><nav class="nav" aria-label="Main"><a href="#/topics" data-link class="hide-s">Topics</a><button id="themeBtn" class="icon-btn" type="button" aria-label="Switch theme"></button></nav></div></header>
+<div id="app"></div>
+
+<!-- core engine -->
+<script src="js/core/utils.js"></script>
+<script src="js/core/theme.js"></script>
+<script src="js/core/math.js"></script>
+<script src="js/core/animation.js"></script>
+<script src="js/core/ui.js"></script>
+<script src="js/core/plot2d.js"></script>
+<script src="js/core/scene3d.js"></script>
+<script src="js/core/draw.js"></script>
+<!-- lessons: add new topic files here, in lesson order -->
+<script src="js/topics/_helpers.js"></script>
+<script src="js/topics/01-vector.js"></script>
+<script src="js/topics/02-add.js"></script>
+<script src="js/topics/03-span.js"></script>
+<script src="js/topics/04-dot.js"></script>
+<script src="js/topics/05-cross.js"></script>
+<script src="js/topics/06-transform.js"></script>
+<script src="js/topics/07-multiply.js"></script>
+<script src="js/topics/08-determinant.js"></script>
+<script src="js/topics/09-cramer.js"></script>
+<script src="js/topics/10-eigen.js"></script>
+<!-- app -->
+<script src="js/app/thumbnails.js"></script>
+<script src="js/app/hero.js"></script>
+<script src="js/app/router.js"></script>
+<script src="js/app/theme-toggle.js"></script>
+<script src="js/app/main.js"></script>
+</body>
+</html>

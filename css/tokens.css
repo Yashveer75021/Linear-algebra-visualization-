@@ -1,0 +1,42 @@
+/* Colour tokens. Light is the default; dark follows the OS unless data-theme is set on <html>. */
+:root {
+  color-scheme:light;
+  --bg:#fbfcfb;--tint:rgba(80,130,220,.07);--grid:rgba(31,92,70,.075);
+  --surface:#ffffff;--surface-2:#f4f8f6;
+  --ink:#13211b;--muted:#51625a;--faint:#7a8b83;
+  --line:#dce6e1;--line-strong:#c3d3cb;
+  --brand:#1f5c46;--brand-ink:#ffffff;--brand-soft:#e4f1ea;
+  --btn:#13211b;--btn-ink:#ffffff;
+  --blue:#3b7dd8;--green:#37995a;--orange:#d4802b;--red:#d2493f;--violet:#7d56cc;--earth:#a67f58;--stone:#8c9792;
+  --cv-bg:#f6faf8;--cv-grid:rgba(31,92,70,.11);--cv-axis:rgba(19,33,27,.5);--cv-text:#51625a;
+  --tile-grass:#7cb872;--tile-water:#4f8be0;--tile-earth:#a8825b;--tile-stone:#8d9893;
+  --shadow:0 22px 50px -26px rgba(19,33,27,.28),0 2px 6px rgba(19,33,27,.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  color-scheme:dark;
+  --bg:#0d1411;--tint:rgba(70,130,210,.11);--grid:rgba(140,220,180,.06);
+  --surface:#141d19;--surface-2:#19241f;
+  --ink:#e9f1ed;--muted:#a3b5ac;--faint:#7b8d85;
+  --line:#25332d;--line-strong:#374b42;
+  --brand:#6fd3a2;--brand-ink:#0d1411;--brand-soft:#173026;
+  --btn:#e9f1ed;--btn-ink:#0d1411;
+  --blue:#6ea6f2;--green:#66c785;--orange:#f2a45a;--red:#ef7a6f;--violet:#b197f0;--earth:#c49a72;--stone:#9aa8a1;
+  --cv-bg:#101915;--cv-grid:rgba(140,220,180,.11);--cv-axis:rgba(233,241,237,.5);--cv-text:#a3b5ac;
+  --tile-grass:#4f8a50;--tile-water:#3a68ad;--tile-earth:#86644a;--tile-stone:#66716c;
+  --shadow:0 22px 50px -26px rgba(0,0,0,.7),0 2px 6px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme:dark;
+  --bg:#0d1411;--tint:rgba(70,130,210,.11);--grid:rgba(140,220,180,.06);
+  --surface:#141d19;--surface-2:#19241f;
+  --ink:#e9f1ed;--muted:#a3b5ac;--faint:#7b8d85;
+  --line:#25332d;--line-strong:#374b42;
+  --brand:#6fd3a2;--brand-ink:#0d1411;--brand-soft:#173026;
+  --btn:#e9f1ed;--btn-ink:#0d1411;
+  --blue:#6ea6f2;--green:#66c785;--orange:#f2a45a;--red:#ef7a6f;--violet:#b197f0;--earth:#c49a72;--stone:#9aa8a1;
+  --cv-bg:#101915;--cv-grid:rgba(140,220,180,.11);--cv-axis:rgba(233,241,237,.5);--cv-text:#a3b5ac;
+  --tile-grass:#4f8a50;--tile-water:#3a68ad;--tile-earth:#86644a;--tile-stone:#66716c;
+  --shadow:0 22px 50px -26px rgba(0,0,0,.7),0 2px 6px rgba(0,0,0,.3);
+}
