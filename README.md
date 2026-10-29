@@ -18,6 +18,7 @@ Plain HTML, CSS and JavaScript. No framework, no build step, no dependencies at 
 | 8 | Determinant and inverse | yes | yes |
 | 9 | Systems and Cramer's rule | yes | |
 | 10 | Eigenvectors and eigenvalues | yes | |
+| 11 | Span and basis of a vector space | yes | yes |
 
 ## Run it
 

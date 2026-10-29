@@ -36,7 +36,20 @@ const THUMBS = {
   multiply: () => '<path d="M14 52h28v28h-28z"/><path d="' + arrP(48, 66, 66, 66, 9) + '"/><path d="M92 46L112 66L92 86L72 66Z"/><path d="' + arrP(120, 66, 138, 66, 9) + '"/><path class="hi fl" d="M146 54h40v24h-40z"/>',
   determinant: () => '<path class="fl" d="M40 98L116 88L142 42L66 52Z"/><path' + DOT + 'd="M40 98h22v-22h-22z"/><path class="hi" d="' + arrP(40, 98, 116, 88, 11) + '"/>',
   cramer: () => '<path d="M20 95L180 35M30 30L170 100"/><circle class="hi" cx="100" cy="65" r="7"/>',
-  eigen: () => '<ellipse cx="100" cy="60" rx="62" ry="26" transform="rotate(-28 100 60)"/><circle' + DOT + 'cx="100" cy="60" r="26"/><path class="hi" d="' + arrP(100, 60, 154.7, 30.9, 11) + arrP(100, 60, 45.3, 89.1, 11) + '"/>'
+  eigen: () => '<ellipse cx="100" cy="60" rx="62" ry="26" transform="rotate(-28 100 60)"/><circle' + DOT + 'cx="100" cy="60" r="26"/><path class="hi" d="' + arrP(100, 60, 154.7, 30.9, 11) + arrP(100, 60, 45.3, 89.1, 11) + '"/>',
+  basis: () => {
+    /* basis grid: two non-parallel arrows + a parallelogram grid */
+    const b1x = 54, b1y = 30, b2x = 14, b2y = 42;
+    let grid = '';
+    for (let i = -2; i <= 2; i++) {
+      grid += 'M' + (100 + i*b1x - 3*b2x) + ' ' + (60 + i*b1y - 3*b2y) + 'L' + (100 + i*b1x + 3*b2x) + ' ' + (60 + i*b1y + 3*b2y);
+      grid += 'M' + (100 + i*b2x - 3*b1x) + ' ' + (60 + i*b2y - 3*b1y) + 'L' + (100 + i*b2x + 3*b1x) + ' ' + (60 + i*b2y + 3*b1y);
+    }
+    return '<path d="' + grid + '"/>' +
+      '<path class="hi" d="' + arrP(100, 60, 100 + b1x, 60 + b1y, 11) + '"/>' +
+      '<path d="' + arrP(100, 60, 100 + b2x, 60 + b2y, 11) + '"/>' +
+      '<circle cx="' + (100 + b1x + b2x) + '" cy="' + (60 + b1y + b2y) + '" r="5"/>';
+  }
 };
 function thumbSVG(id, i) {
   const inner = THUMBS[id] ? THUMBS[id]() : '';
